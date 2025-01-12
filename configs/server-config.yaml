@@ -1,0 +1,6 @@
+# main listening port, accepts conenction from single-rcon-client
+listen: ":12345"
+clients:
+  clientnamehere: # this is username in client-config.yaml
+    key: "ssh-ed25519 ABCDEF" # Public Key of single-rcon-client, authorized_keys format
+    port: ":54321" # address which ssh server in client listens

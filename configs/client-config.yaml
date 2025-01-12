@@ -1,0 +1,19 @@
+# install directory
+# no effect if you don't install
+install: "/opt/single-rcon"
+
+# bridge server (single-rcon-server) setting
+bridge:
+  address: "localhost:12345" # must have port
+  hostkey: "host ssh-ed25519 YOURHOSTKEYHERE" # host key of bridge server, known_hosts format
+  username: "clientnamehere" # Username of bridge server
+  privkey: | # Private Key for authenticate to bridge server
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    NEW_KEY_MUST_BE_HERE
+    -----END OPENSSH PRIVATE KEY-----
+
+# shell server setting
+server:
+  users:
+    yourname: # Username, only affects to authentication. Shells are always launched as executing user of this program
+      key: "ssh-ed25519 ABCDEF" # Public Key of your SSH Client, don't put private key to any server

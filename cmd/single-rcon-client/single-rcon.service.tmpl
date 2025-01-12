@@ -1,0 +1,12 @@
+[Unit]
+Description=single-rcon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart={{.ExecStart}}
+WorkingDirectory={{.WorkingDirectory}}
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
